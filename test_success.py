@@ -11,7 +11,7 @@ class TestCalculateAverage(unittest.TestCase):   #Se define una clase que hereda
         self.assertEqual(result, 3)  #Metodo de asercion para comparar el resultado obtenido con el valor esperado
 
     def test_calculate_average_empty_list(self):   #Se crea una lista vacia para verificar si la excepcion ValueError se cumple
-        numbers = []
+        numbers = [1, 2]
         with self.assertRaises(ValueError):  
             calculate_average(numbers) #Metodo de asercion para comprobar que una excepcion se cumpla, ValueError en este caso
 
@@ -19,6 +19,7 @@ class TestCalculateAverage(unittest.TestCase):   #Se define una clase que hereda
 if __name__ == '__main__':  #Aseguura que las pruebas se ejecuten solo cuando el archivo se ejecute directamente, no cuando se importa como un modulo
 
     unittest.main() #Ejecutar pruebas
+
 
 
 
